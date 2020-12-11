@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainWindow</class>
+ <widget class="QMainWindow" name="mainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1433</width>
+    <height>933</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Лексический анализ</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #FFFFFF;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stack">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1433</width>
+      <height>933</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #FFFFFF;</string>
+    </property>
+    <property name="currentIndex">
+     <number>5</number>
+    </property>
+    <widget class="QWidget" name="page">
+     <widget class="QPushButton" name="starting">
+      <property name="geometry">
+       <rect>
+        <x>546</x>
+        <y>450</y>
+        <width>341</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#edit_budget {
+	background:linear-gradient(to bottom, #62c1e0 5%, #019ad2 100%);
+	background-color:#62c1e0;
+	border-radius:6px;
+	border:1px solid #057fd0;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 6px;
+	text-decoration:none;
+}
+#edit_budget:hover {
+	background:linear-gradient(to bottom, #019ad2 5%, #62c1e0 100%);
+	background-color:#019ad2;
+}
+#edit_budget:active {
+	position:relative;
+	top:1px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>НАЧАТЬ РАБОТУ</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_1">
+     <widget class="QPushButton" name="to_analysis">
+      <property name="geometry">
+       <rect>
+        <x>421</x>
+        <y>500</y>
+        <width>591</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#add_income {
+	background:linear-gradient(to bottom, #62c1e0 5%, #019ad2 100%);
+	background-color:#62c1e0;
+	border-radius:6px;
+	border:1px solid #057fd0;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 6px;
+	text-decoration:none;
+}
+#add_income:hover {
+	background:linear-gradient(to bottom, #019ad2 5%, #62c1e0 100%);
+	background-color:#019ad2;
+}
+#add_income:active {
+	position:relative;
+	top:1px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>СПРАВОЧНИК СРЕДСТВ ВЫРАЗИТЕЛЬНОСТИ</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="to_guide">
+      <property name="geometry">
+       <rect>
+        <x>421</x>
+        <y>340</y>
+        <width>591</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#add_income {
+	background:linear-gradient(to bottom, #62c1e0 5%, #019ad2 100%);
+	background-color:#62c1e0;
+	border-radius:6px;
+	border:1px solid #057fd0;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 6px;
+	text-decoration:none;
+}
+#add_income:hover {
+	background:linear-gradient(to bottom, #019ad2 5%, #62c1e0 100%);
+	background-color:#019ad2;
+}
+#add_income:active {
+	position:relative;
+	top:1px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>ЛЕКСИЧЕСКИЙ АНАЛИЗ ТЕКСТА</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>276</x>
+        <y>170</y>
+        <width>881</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Что вы хотите сделать сегодня?</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <widget class="QLabel" name="input_label">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>320</y>
+        <width>301</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>ВСТАВЬТЕ ТЕКСТ В ЭТО ОКНО:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="analysis_label">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>40</y>
+        <width>601</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>АНАЛИЗ ТЕКСТА</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="text_input">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>360</y>
+        <width>291</width>
+        <height>321</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="submit_button">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>690</y>
+        <width>211</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>ЗАГРУЗИТЬ ТЕКСТ</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="load_file">
+      <property name="geometry">
+       <rect>
+        <x>780</x>
+        <y>500</y>
+        <width>291</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>ЗАГРУЗИТЬ ФАЙЛ</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="back_from_analysis">
+      <property name="geometry">
+       <rect>
+        <x>1250</x>
+        <y>820</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#back_from_expance {
+	background:linear-gradient(to bottom, #62c1e0 5%, #019ad2 100%);
+	background-color:#62c1e0;
+	border-radius:6px;
+	border:1px solid #057fd0;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 6px;
+	text-decoration:none;
+}
+#back_from_expance:hover {
+	background:linear-gradient(to bottom, #019ad2 5%, #62c1e0 100%);
+	background-color:#019ad2;
+}
+#back_from_expance:active {
+	position:relative;
+	top:1px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>НАЗАД</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>750</x>
+        <y>470</y>
+        <width>341</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>ЗАГРУЗИТЕ ДОКУМЕНТ С ТЕКСТОМ:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="func_choice">
+      <property name="geometry">
+       <rect>
+        <x>511</x>
+        <y>190</y>
+        <width>421</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <item>
+       <property name="text">
+        <string>Выдать частотный список существительных</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Выдать частотный список глаголов</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Выдать частотный список прилагательных</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Выдать список имён собственных</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>150</y>
+        <width>541</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>ВЫБЕРИТЕ, ЧТО ХОТИТЕ СДЕЛАТЬ С ТЕКСТОМ:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="or_label">
+      <property name="geometry">
+       <rect>
+        <x>691</x>
+        <y>500</y>
+        <width>51</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>ИЛИ</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_3">
+     <widget class="QPushButton" name="back_from_guide">
+      <property name="geometry">
+       <rect>
+        <x>1250</x>
+        <y>820</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#back_from_plot {
+	background:linear-gradient(to bottom, #62c1e0 5%, #019ad2 100%);
+	background-color:#62c1e0;
+	border-radius:6px;
+	border:1px solid #057fd0;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 6px;
+	text-decoration:none;
+}
+#back_from_plot:hover {
+	background:linear-gradient(to bottom, #019ad2 5%, #62c1e0 100%);
+	background-color:#019ad2;
+}
+#back_from_plot:active {
+	position:relative;
+	top:1px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>НАЗАД</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="choose_means_label">
+      <property name="geometry">
+       <rect>
+        <x>351</x>
+        <y>205</y>
+        <width>731</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>ВЫБЕРИТЕ СРЕДСТВО ВЫРАЗИТЕЛЬНОСТИ, О КОТОРОМ ХОТИТЕ ПРОЧИТАТЬ:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="exp_means_list">
+      <property name="geometry">
+       <rect>
+        <x>451</x>
+        <y>260</y>
+        <width>531</width>
+        <height>371</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <item>
+       <property name="text">
+        <string>Аллитерация</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ассонанс</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Аллегория</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Бессоюзие</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Гипербола</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ирония</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Лексический повтор</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Литота</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Метафора</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Метонимия</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Окказионализмы</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Олицетворение</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Парафраз</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Перифраз</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Сарказм</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Синекдоха</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Сравнение</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Эпитет</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Анафора</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Антитеза</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Градация</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Инверсия</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Композиционный стык</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Многосоюзие</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Оксюморон</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Парцелляция</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Риторический вопрос, восклицание, обращение</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Однородные члены</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Синтаксический параллелизм</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Эллипсис</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Эпифора</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="guide_label">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>40</y>
+        <width>601</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>СПРАВОЧНИК СРЕДСТВ ВЫРАЗИТЕЛЬНОСТИ </string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_4">
+     <widget class="QTextEdit" name="means_output">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>290</y>
+        <width>611</width>
+        <height>451</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+      <property name="autoFormatting">
+       <set>QTextEdit::AutoBulletList</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="back_from_gr">
+      <property name="geometry">
+       <rect>
+        <x>1250</x>
+        <y>820</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>НАЗАД</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="means_name_output">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>210</y>
+        <width>611</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_5">
+     <widget class="QPushButton" name="back_from_ar">
+      <property name="geometry">
+       <rect>
+        <x>1250</x>
+        <y>820</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>НАЗАД</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="func_out_name">
+      <property name="geometry">
+       <rect>
+        <x>346</x>
+        <y>110</y>
+        <width>731</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="analysis_output">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>190</y>
+        <width>531</width>
+        <height>531</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1433</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
