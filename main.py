@@ -27,9 +27,10 @@ class MainWindow(QMainWindow):
         self.exp_means_list.itemClicked.connect(self.guide_item_func)
         self.submit_button.clicked.connect(self.submit_text)
         self.back_from_gr.clicked.connect(self.to_analysis_func)
-        self.back_from_ar.clicked.connect(self.back_from_ar_func)
+        self.end_button.clicked.connect(self.end_analysis_func)
         self.load_file.clicked.connect(self.load_file_func)
-        self.back_from_fon.clicked.connect(self.to_guide_func)
+        self.back_from_fon.clicked.connect(self.back_from_fon_func)
+        self.continue_button.clicked.connect(self.continue_analysis_func)
 
         self.centralwidget.setStyleSheet("background-color: #B0C4DE;")
         self.page.setStyleSheet("background-color: #B0C4DE;")
@@ -77,11 +78,11 @@ class MainWindow(QMainWindow):
         text = text.lower().replace('-', ' ')
         text = ''.join([i for i in text if i in ABC]).split()
         words = list(map(lambda x: MORPH.parse(x)[0].normal_form, text))
-        nouns = list(set([i for i in words if 'ADVB' in MORPH.parse(i)[0].tag]))
-        nouns = sorted(nouns, key=lambda x: words.count(x), reverse=True)
+        adverbs = list(set([i for i in words if 'ADVB' in MORPH.parse(i)[0].tag]))
+        adverbs = sorted(adverbs, key=lambda x: words.count(x), reverse=True)
         self.func_out_name.setText('Частотный список наречий в тексте:')
         self.func_out_name.setAlignment(QtCore.Qt.AlignCenter)
-        for i in nouns:
+        for i in adverbs:
             item = QListWidgetItem(i)
             item.setTextAlignment(QtCore.Qt.AlignHCenter)
             item.setFont(QFont('Comic Sans MS', 9))
@@ -143,7 +144,7 @@ class MainWindow(QMainWindow):
                     vow_i.append(i + ' - ' + str(letters.count(i)))
                 elif i in 'жшщ':
                     cons_ship.append(i + ' - ' + str(letters.count(i)))
-                elif i in 'зс':
+                elif i in 'с':
                     cons_svis.append(i + ' - ' + str(letters.count(i)))
                 elif i in 'л':
                     cons_l.append(i + ' - ' + str(letters.count(i)))
@@ -151,7 +152,7 @@ class MainWindow(QMainWindow):
                     cons_r.append(i + ' - ' + str(letters.count(i)))
             item = QListWidgetItem('УЮ: ' + ' '.join(vow_u) + ' ОЁ: ' + ' '.join(vow_o) + ' И: ' + ' '.join(vow_i) + ' ЕЭ: '
                                    + ' '.join(vow_e) + ' АЯ: ' + ' '.join(vow_a) + ' ШИПЯЩИЕ: ' + ' '.join(cons_ship)
-                                   + ' СВИСТЯЩИЕ: ' + ' '.join(cons_svis) + ' Л: ' + ' '.join(cons_l) + ' Р: '
+                                   + ' С: ' + ' '.join(cons_svis) + ' Л: ' + ' '.join(cons_l) + ' Р: '
                                    + ' '.join(cons_r))
             item.setTextAlignment(QtCore.Qt.AlignHCenter)
             item.setFont(QFont('Comic Sans MS', 9))
@@ -202,9 +203,19 @@ class MainWindow(QMainWindow):
         self.func_choice_func()
         self.chosen_func(text)
 
-    def back_from_ar_func(self):
-        self.stack.setCurrentIndex(2)
+    def end_analysis_func(self):
+        self.stack.setCurrentIndex(1)
         self.text_input.clear()
+        self.analysis_output.clear()
+
+    def continue_analysis_func(self):
+        self.stack.setCurrentIndex(2)
+        self.analysis_output.clear()
+
+    def back_from_fon_func(self):
+        self.stack.setCurrentIndex(2)
+        self.fon_list.clear()
+        self.line_list.clear()
 
 
 def main():
